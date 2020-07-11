@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>© xiedaimala.com 2018 wechat: xiedaimala01</p>
+    <p>© bilibili.com 2020 wechat: 小鱼说UP</p>
   </footer>
 </template>
 
