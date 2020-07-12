@@ -1,22 +1,22 @@
 <template>
   <div id="index">
     <section class="blog-posts">
-      <div class="item">
+      <router-link  class="item" v-for="blog in blogs" :to="`/detail/${blog.id}`">
         <figure class="avatar">
-          <img src="https://cn.gravatar.com/avatar/1?s=128&d=identicon" alt="">
-          <figcaption>小鱼说UP</figcaption> 
+          <img src="blog.user.avatar" :alt="blog.user.username">
+          <figcaption>{{blog.user.username}}</figcaption> 
         </figure>
-        <h3>历史那些事 <span>3天前</span></h3> 
-        <p>《历史那些事》是一部“实验性”的历史文化纪录片，以传统纪录片配合创意中插的形式，发掘历代史料中有趣的故事，呈现真实鲜活的历史。纪录片部分相对传统，着重于展示来自正史和古籍中的历史；创意中插部分则形式多样，如：真人秀、脱口秀、侦探剧、MV、热门综艺、日和短剧、热门广告等，依据史实合理改编，让历史充满脑洞...</p>
-      </div>
-      <div class="item">
-        <figure class="avatar">
-          <img src="https://cn.gravatar.com/avatar/1?s=128&d=identicon" alt="">
-          <figcaption>小鱼说UP</figcaption> 
-        </figure>
-        <h3> <span>3天前</span></h3> 
-        <p>《川味》讲述的是四川美食文化。从高原峡谷，到盆地竹海，从神秘的摩梭风情到藏族的美丽姑娘，从四季变化，到城市繁华，故事设定在改革开放以后，四川美食蓬勃发展，许多人开始以烹饪美食为谋生手段，这些人的命运从此与他手上的美味息息相关。他们传承，探秘，创新，用食物带来了一次次全新的味觉体验，也一次又一次颠覆着味蕾的感受...</p>
-      </div>
+        <h3>{{blog.title}} <span>{{blog.createdAt}}</span></h3> 
+        <p>{{blog.description}}</p>
+      </router-link>
+      </section>
+      <section class="pagination">
+      <el-pagination 
+      layout="prev,pager,next"
+      :total="total"
+      :current-page="page"
+      @current-change ="onPageChange"> 
+      </el-pagination>
     </section>
   </div>
 </template>
