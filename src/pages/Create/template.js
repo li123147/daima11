@@ -1,4 +1,5 @@
 import blog from "@/api/blog";
+
 export default {
   data() {
     return {
@@ -8,6 +9,7 @@ export default {
       atIndex: false
     };
   },
+
   methods: {
     onCreate() {
       blog
