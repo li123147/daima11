@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>© bilibili.com 2020 wechat: 小鱼说UP</p>
+    <p>©小阿鱼的快乐博客窝</p>
   </footer>
 </template>
 
@@ -12,6 +12,7 @@ footer {
   font-size: 13px;
   padding: 10px;
   text-align: center;
+  
 }
 
 </style>
