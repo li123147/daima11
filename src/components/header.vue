@@ -2,7 +2,7 @@
   <header :class="{login: isLogin, 'no-login': !isLogin}">
     <template v-if="!isLogin">
       <h1>share your life</h1>
-      <p>精品UP主汇聚</p>
+      <p>博客冲浪小屋</p>
       <div class="btns">
         <router-link to="/login">
           <el-button>立即登录</el-button>

@@ -12,8 +12,7 @@ export default {
 
   methods: {
     onCreate() {
-      blog
-        .createBlog({
+      blog.createBlog({
           title: this.title,
           content: this.content,
           description: this.description,
